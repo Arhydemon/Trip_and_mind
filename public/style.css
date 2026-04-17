@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: whitesmoke;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+#gallery-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#gallery-list div {
+    background: white;
+    border-radius: 6px;
+}
