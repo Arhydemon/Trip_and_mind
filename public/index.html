@@ -4,64 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Trip & Mind</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#about">О нас</a>
-            <a href="#gallery">Галерея</a>
-            <a href="#news">Новости</a>
-            <a href="#contact">Контакты</a>
-        </nav>
+    <header class="header">
+        <div class="container header-init"> <!-- container делаю по центру, а header-init для флекса -->
+
+            <div class="logo">Trip and Mind</div> <!-- логотипчик -->
+            <nav class="nav">
+                <a href="#gallery">Все туры</a>
+                <a href="#contact">Контакты</a>
+                <a href="#news">Новости</a>
+            </nav>
+        </div>
     </header>
+    <!-- ================= MAIN ================= -->
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="hero"></section> <!-- hero у меня это первый экранчик -->
+        <div class="container hero-init">
+            <!-- ===== ЛЕВАЯ ЧАСТЬ ===== -->
+            <div class="hero-content">
+                <h1>Открой для себя<br>новую Ирландию</h1>
+                <p class="hero-text">Авторские туры по живописным уголкам от</p>
+                <p class="hero-text-small">Макарончика</p>
+            </div>
+        </div>
 
-<main>
-    <section id="about">
-        <h2>О компании</h2>
-        <p id="about-text">
-            Загрузка йоу...
-        </p>
-    </section>
+    </main>
 
-    <section id="gallery">
-        <h2>Галерея</h2>
-        <div id="gallery-list"></div>
-    </section>
 
-    <section id="news">
-        <h2>Новости</h2>
-        <div id="news_list"></div>
-    </section>
 
-    <section id="contact">
-        <h2>Обратная связь</h2>
-        <form id="form">
-            <input
-            type="text"
-            id="name"
-            placeholder="Ваше имя"
-            required>
 
-            <textarea id="message" placeholder="Ваша заяв0чка" required ></textarea>
-
-            <button type="submit">ОТПРАВИТЬ</button>
-        </form>
-    </section>
-
-</main>
-
-<footer>
-    <nav>
-        <a href="#about">О нас</a>
-        <a href="#gallery">Галерея</a>
-        <a href="#news">Новости</a>
-    </nav>
-
-    <p>@ ZOV</p>
-</footer>
 
 <script src="script.js"></script>
 </body>
