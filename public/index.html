@@ -10,7 +10,7 @@
 
 <body>
     <header class="header">
-        <div class="container header-init"> <!-- container делаю по центру, а header-init для флекса -->
+        <div class="container header-inner"> <!-- container делаю по центру, а header-inner для флекса -->
 
             <div class="logo">Trip and Mind</div> <!-- логотипчик -->
             <nav class="nav">
@@ -25,166 +25,168 @@
     <main>
 
         <!-- ================= HERO ================= -->
-        <section class="hero"></section> <!-- hero у меня это первый экранчик -->
+        <section class="hero"> <!-- hero у меня это первый экранчик -->
 
-        <div class="container hero-init">
+            <div class="container hero-inner">
 
-            <!-- ===== ЛЕВАЯ ЧАСТЬ ===== -->
-            <div class="hero-content">
-                <h1>Открой для себя<br>новую Ирландию</h1>
-                <p class="hero-text">Авторские туры по живописным уголкам от</p>
-                <p class="hero-text-small">Макарончика</p>
+                <!-- ===== ЛЕВАЯ ЧАСТЬ ===== -->
+                <div class="hero-content">
+                    <h1>Открой для себя<br>новую Ирландию</h1>
+                    <p class="hero-text">Авторские туры по живописным уголкам от</p>
+                    <p class="hero-text-small">Макарончика</p>
 
-                <!--КНОПОЧКИ-->
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Оставить заявку</a>
-                    <a href="#" class="btn-video">
-                        <span class="btt-video-circle">▶</span>
-                        <span class="bty-video-text">Посмотреть видео<br>за прошлые года</span>
-                    </a>
-                </div>
+                    <!-- КНОПОЧКИ -->
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">Оставить заявку</a>
 
-                <!-- СОЦСЕТИ-->
-                <p class="hero-social-title">Переходите в наши Социальныен Сети</p>
-                <div class="hero-socials">
-                    <a href="https:tg" target="_blank">
-                        <img src="icons/tg.png" alt="Telegram">
-                    </a>
-
-                    <a href="https:inst" target="_blank">
-                        <img src="icons/inst.png" alt="Instagram">
-                    </a>
-
-                    <a href="https:vk" target="_blank">
-                        <img src="icons/vk.png" alt="vk">
-                    </a>
-                </div>
-            </div>
-
-            <!-- ===== ПРАВАЯ ЧАСТЬ (СЛАЙДЕР) ===== -->
-            <div class="hero-slider">
-                <button class="slider-btn slider-btn-left" id="prevBtn">
-                    ‹
-                </button>
-
-                <!--ВСЕ КАРТОЧКИ-->
-                <div class="slider-track" id="sliderTrack">
-
-                    <!-- 1 карточка -->
-                    <div class="slide">
-                        <img src="images/slide1.jpg" alt="Скалы Ирландии">
-                        <div class="slide-overlay">
-                            <!-- Номер -->
-                            <span class="slide-number">01</span>
-                            <!-- Название -->
-                            <h3>Скалы<br>Ирландии</h3>
-                        </div>
+                        <a href="#" class="btn-video">
+                            <span class="btn-video-circle">▶</span>
+                            <span class="btn-video-text">Посмотреть видео<br>за прошлые года</span>
+                        </a>
                     </div>
 
-                    <!-- 2 карточка -->
-                    <div class="slide">
-                        <img src="images/slide2.jpg" alt="Горы Ирландии">
-                        <div class="slide-overlay">
-                            <span class="slide-number">02</span>
-                            <h3>Горы<br>Ирландии</h3>
-                        </div>
-                    </div>
+                    <!-- СОЦСЕТИ -->
+                    <p class="hero-social-title">Переходите в наши Социальные Сети</p>
+                    <div class="hero-socials">
+                        <a href="https://t.me/your_name" target="_blank">
+                            <img src="icons/tg.png" alt="Telegram">
+                        </a>
 
-                    <!-- 3 карточка -->
-                    <div class="slide">
-                        <img src="images/slide3.jpg" alt="Озёра Ирландии">
-                        <div class="slide-overlay">
-                            <span class="slide-number">03</span>
-                            <h3>Озёра<br>Ирландии</h3>
-                        </div>
-                    </div>
+                        <a href="https://instagram.com/your_name" target="_blank">
+                            <img src="icons/inst.png" alt="Instagram">
+                        </a>
 
-                    <!-- 4 карточка -->
-                    <div class="slide">
-                        <img src="images/slide4.jpg" alt="Долины Ирландии">
-                        <div class="slide-overlay">
-                            <span class="slide-number">04</span>
-                            <h3>Долины<br>Ирландии</h3>
-                        </div>
-                    </div>
-
-                    <!-- 5 карточка -->
-                    <div class="slide">
-                        <img src="images/slide5.jpg" alt="Побережье Ирландии">
-                        <div class="slide-overlay">
-                            <span class="slide-number">05</span>
-                            <h3>Побережье<br>Ирландии</h3>
-                        </div>
+                        <a href="https://vk.com/your_name" target="_blank">
+                            <img src="icons/vk.png" alt="VK">
+                        </a>
                     </div>
                 </div>
-                <!-- Кнопка вправо -->
-                <button class="slider-btn slider-btn-right" id="nextBtn">
-                    ›
-                </button>
+
+                <!-- ===== ПРАВАЯ ЧАСТЬ (СЛАЙДЕР) ===== -->
+                <div class="hero-slider">
+                    <button class="slider-btn slider-btn-left" id="prevBtn">
+                        ‹
+                    </button>
+
+                    <!-- ВСЕ КАРТОЧКИ -->
+                    <div class="slider-track" id="sliderTrack">
+
+                        <!-- 1 карточка -->
+                        <div class="slide">
+                            <img src="images/slide1.jpg" alt="Скалы Ирландии">
+                            <div class="slide-overlay">
+                                <!-- Номер -->
+                                <span class="slide-number">01</span>
+                                <!-- Название -->
+                                <h3>Скалы<br>Ирландии</h3>
+                            </div>
+                        </div>
+
+                        <!-- 2 карточка -->
+                        <div class="slide">
+                            <img src="images/slide2.jpg" alt="Горы Ирландии">
+                            <div class="slide-overlay">
+                                <span class="slide-number">02</span>
+                                <h3>Горы<br>Ирландии</h3>
+                            </div>
+                        </div>
+
+                        <!-- 3 карточка -->
+                        <div class="slide">
+                            <img src="images/slide3.jpg" alt="Озёра Ирландии">
+                            <div class="slide-overlay">
+                                <span class="slide-number">03</span>
+                                <h3>Озёра<br>Ирландии</h3>
+                            </div>
+                        </div>
+
+                        <!-- 4 карточка -->
+                        <div class="slide">
+                            <img src="images/slide4.jpg" alt="Долины Ирландии">
+                            <div class="slide-overlay">
+                                <span class="slide-number">04</span>
+                                <h3>Долины<br>Ирландии</h3>
+                            </div>
+                        </div>
+
+                        <!-- 5 карточка -->
+                        <div class="slide">
+                            <img src="images/slide5.jpg" alt="Побережье Ирландии">
+                            <div class="slide-overlay">
+                                <span class="slide-number">05</span>
+                                <h3>Побережье<br>Ирландии</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка вправо -->
+                    <button class="slider-btn slider-btn-right" id="nextBtn">
+                        ›
+                    </button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ================= ЭБАУТ ХЕХЕХЕ ================= -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>О компании</h2>
-            <div class="about-box">
-                <p>Мы создаём авторские маршруты по самым атмосферным уголкам Ирландии, объединяя природу, эстетику путешествий и продуманный сервис.</p>
+        <!-- ================= ЭБАУТ ХЕХЕХЕ ================= -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>О компании</h2>
+                <div class="about-box">
+                    <p>Мы создаём авторские маршруты по самым атмосферным уголкам Ирландии, объединяя природу, эстетику путешествий и продуманный сервис.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <!-- ================= ГАЛЕРЕЯ ================= -->
-    <section id="gallery" class="section">
-        <div class="container">
-            <h2>Галерея</h2>
-            <div class="gallery-list" id="gallery-list"></div>
-        </div>
-    </section>
-
-    <!-- ================= НОВАСТИ ================= -->
-    <section id="news" class="section">
-        <div class="container">
-            <h2>Новости</h2>
-            <div class="news-list" id="news-list">
+        <!-- ================= ГАЛЕРЕЯ ================= -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Галерея</h2>
+                <div class="gallery-list" id="gallery-list"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Обратная связь</h2>
-            <form class="contact-form" id="feedback-form">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Ваш email" required>
-                <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
-                <button type="submit">Отправить</button>
-            </form>
-            <p class="form-status" id="form-status"></p>
-        </div>
-    </section>
+        <!-- ================= НОВАСТИ ================= -->
+        <section id="news" class="section">
+            <div class="container">
+                <h2>Новости</h2>
+                <div class="news-list" id="news-list"></div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Обратная связь</h2>
+                <form class="contact-form" id="feedback-form">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="email" name="email" placeholder="Ваш email" required>
+                    <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+                <p class="form-status" id="form-status"></p>
+            </div>
+        </section>
     </main>
 
     <!-- ================= ПОДВАЛЬЧИК ================= -->
     <footer class="footer">
-    <div class="container footer-inner">
-        <div>
-        <div class="logo">Trip & Mind</div>
-        <p class="footer-text">
-            Путешествия, вдохновение и новые открытия.
-        </p>
+        <div class="container footer-inner">
+            <div>
+                <div class="logo">Trip & Mind</div>
+                <p class="footer-text">
+                    Путешествия, вдохновение и новые открытия.
+                </p>
+            </div>
+
+            <nav class="footer-nav">
+                <a href="#about">О компании</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#news">Новости</a>
+                <a href="#contact">Контакты</a>
+            </nav>
         </div>
-        <nav class="footer-nav">
-        <a href="#about">О компании</a>
-        <a href="#gallery">Галерея</a>
-        <a href="#news">Новости</a>
-        <a href="#contact">Контакты</a>
-        </nav>
-    </div>
-</footer>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
