@@ -484,3 +484,166 @@ body {
     text-decoration: none;
     margin-right: 25px;
 }
+
+/* ====================== АДАПТИВ ====================== */
+
+/* ====================== ПЛАНШЕТЫ (до 1200px) ====================== */
+@media (max-width: 1200px) {
+    .hero-inner { gap: 120px; }
+    .hero-slider { width: 340px; height: 226px; }
+}
+
+/* ====================== ПЛАНШЕТЫ (до 992px) ====================== */
+@media (max-width: 992px) {
+    .nav { gap: 30px; }
+    .hero h1 { font-size: 46px; }
+    .hero-slider { width: 320px; height: 213px; }
+}
+
+/* ====================== МОБИЛЬНЫЕ ТЕЛЕФОНЫ (основной) ====================== */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav {
+        gap: 20px;
+        font-size: 17px;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+        padding-top: 130px;
+        padding-bottom: 50px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .btn-primary {
+        min-width: 280px;
+        height: 64px;
+        font-size: 18px;
+    }
+
+    .btn-video {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .hero-slider {
+        width: 100%;
+        max-width: 340px;
+        height: 220px;
+        margin-top: 10px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .about-box {
+        padding: 35px 25px;
+        margin: 20px auto;
+    }
+
+    /* Галерея и Новости одна колонка */
+    .gallery-list,
+    .news-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form {
+        padding: 30px 25px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Соцсети по центру */
+    .hero-social-title {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .hero-socials {
+        justify-content: center;
+        gap: 28px;
+    }
+}
+
+/* ====================== МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px) ====================== */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-text, .hero-text-small {
+        font-size: 15.5px;
+    }
+
+    .hero-slider {
+        max-width: 290px;
+        height: 190px;
+    }
+
+    .btn-primary {
+        min-width: 260px;
+        height: 60px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .gallery-item img,
+    .news-item img {
+        height: 180px;
+    }
+
+    .hero-socials {
+        gap: 22px;
+    }
+}
+
+/* Дополнительные правки для слайдера на мобильных */
+@media (max-width: 768px) {
+    .slide h3 {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    .slide-number {
+        font-size: 13px;
+    }
+}
