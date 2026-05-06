@@ -12,7 +12,7 @@
     <header class="header fade-on-scroll">
         <div class="container header-inner"> <!-- container делаю по центру, а header-inner для флекса -->
 
-            <div class="logo">Trip and Mind</div> <!-- логотипчик -->
+            <div class="logo">Trip & Mind</div> <!-- логотипчик -->
             <nav class="nav">
                 <a href="#gallery">Все туры</a>
                 <a href="#contact">Контакты</a>
@@ -39,7 +39,7 @@
                     <div class="hero-buttons">
                         <a href="#contact" class="btn-primary">Оставить заявку</a>
 
-                        <a href="#" class="btn-video">
+                        <a href="./video/1.mp4" class="btn-video">
                             <span class="btn-video-circle">▶</span>
                             <span class="btn-video-text">Посмотреть видео<br>за прошлые года</span>
                         </a>
@@ -48,15 +48,13 @@
                     <!-- СОЦСЕТИ -->
                     <p class="hero-social-title">Переходите в наши Социальные Сети</p>
                     <div class="hero-socials">
-                        <a href="https://t.me/your_name" target="_blank">
+                        <a href="https://t.me/dead_raver" target="_blank">
                             <img src="icons/tg.png" alt="Telegram">
                         </a>
-
-                        <a href="https://instagram.com/your_name" target="_blank">
+                        <a href="https://instagram.com/kawai_sempai_" target="_blank">
                             <img src="icons/inst.png" alt="Instagram">
                         </a>
-
-                        <a href="https://vk.com/your_name" target="_blank">
+                        <a href="https://vk.com/durov" target="_blank">
                             <img src="icons/vk.png" alt="VK">
                         </a>
                     </div>
@@ -64,25 +62,18 @@
 
                 <!-- ===== ПРАВАЯ ЧАСТЬ (СЛАЙДЕР) ===== -->
                 <div class="hero-slider fade-on-scroll">
-                    <button class="slider-btn slider-btn-left" id="prevBtn">
-                        ‹
-                    </button>
+                    <button class="slider-btn slider-btn-left" id="prevBtn">‹</button>
 
-                    <!-- ВСЕ КАРТОЧКИ -->
                     <div class="slider-track" id="sliderTrack">
-
-                        <!-- 1 карточка -->
-                        <div class="slide">
-                            <img src="images/slide1.jpg" alt="Скалы Ирландии">
+                        <!-- Слайды (5 штук) -->
+                        <div class="slide active">
+                            <img src="images/slide1.jpg" alt="Озёра Ирландии">
                             <div class="slide-overlay">
-                                <!-- Номер -->
                                 <span class="slide-number">01</span>
-                                <!-- Название -->
-                                <h3>Скалы<br>Ирландии</h3>
+                                <h3>Озёра<br>Ирландии</h3>
                             </div>
                         </div>
-
-                        <!-- 2 карточка -->
+                        <!-- Остальные 4 слайда аналогично... -->
                         <div class="slide">
                             <img src="images/slide2.jpg" alt="Горы Ирландии">
                             <div class="slide-overlay">
@@ -90,17 +81,13 @@
                                 <h3>Горы<br>Ирландии</h3>
                             </div>
                         </div>
-
-                        <!-- 3 карточка -->
                         <div class="slide">
-                            <img src="images/slide3.jpg" alt="Озёра Ирландии">
+                            <img src="images/slide3.jpg" alt="Водопады Ирландии">
                             <div class="slide-overlay">
                                 <span class="slide-number">03</span>
-                                <h3>Озёра<br>Ирландии</h3>
+                                <h3>Водопады<br>Ирландии</h3>
                             </div>
                         </div>
-
-                        <!-- 4 карточка -->
                         <div class="slide">
                             <img src="images/slide4.jpg" alt="Долины Ирландии">
                             <div class="slide-overlay">
@@ -108,8 +95,6 @@
                                 <h3>Долины<br>Ирландии</h3>
                             </div>
                         </div>
-
-                        <!-- 5 карточка -->
                         <div class="slide">
                             <img src="images/slide5.jpg" alt="Побережье Ирландии">
                             <div class="slide-overlay">
@@ -119,25 +104,27 @@
                         </div>
                     </div>
 
-                    <!-- Кнопка вправо -->
-                    <button class="slider-btn slider-btn-right" id="nextBtn">
-                        ›
-                    </button>
+                    <button class="slider-btn slider-btn-right" id="nextBtn">›</button>
                 </div>
             </div>
         </section>
 
-        <!-- ================= ЭБАУТ ХЕХЕХЕ ================= -->
+        <!-- ================= О КОМПАНИИ ================= -->
         <section id="about" class="section">
             <div class="container">
                 <h2>О компании</h2>
                 <div class="about-box">
-                    <p>Мы создаём авторские маршруты по самым атмосферным уголкам Ирландии, объединяя природу, эстетику путешествий и продуманный сервис.</p>
+                    <p>Привет, мы — <strong>Trip & Mind</strong> 🌿</p>
+                    <p>Делаем авторские туры по Ирландии, где реально кайфово и атмосферно.</p>
+                    <p>Никаких больших групп и стандартных программ. Только маленькие компании до 8 человек, красивые маршруты, уютные места и настоящее ощущение путешествия.</p>
+                    <p>Здесь ты будешь встречать рассветы на скалах, гулять по туманным горам, пить кофе у озера и делать кадры, от которых потом долго не оторваться.</p>
+                    <p>Мы сами влюблены в эти места и хотим показать их тебе так, чтобы ты влюбился тоже.</p>
+                    <p>Если ищешь не просто тур, а настоящий вайб и новые эмоции — добро пожаловать.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ================= ГАЛЕРЕЯ ================= -->
+        <!-- ================= ГАЛЕРЕЯ (из JSON) ================= -->
         <section id="gallery" class="section">
             <div class="container">
                 <h2>Галерея</h2>
@@ -145,7 +132,7 @@
             </div>
         </section>
 
-        <!-- ================= НОВАСТИ ================= -->
+        <!-- ================= НОВОСТИ (из JSON) ================= -->
         <section id="news" class="section">
             <div class="container">
                 <h2>Новости</h2>
@@ -157,7 +144,7 @@
         <section id="contact" class="section">
             <div class="container">
                 <h2>Обратная связь</h2>
-                <form class="contact-form" id="feedback-form">
+                <form class="contact-form" id="feedback-form" enctype="application/x-www-form-urlencoded">
                     <input type="text" name="name" placeholder="Ваше имя" required>
                     <input type="email" name="email" placeholder="Ваш email" required>
                     <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
@@ -168,14 +155,12 @@
         </section>
     </main>
 
-    <!-- ================= ПОДВАЛЬЧИК ================= -->
+    <!-- ================= ПОДВАЛ ================= -->
     <footer class="footer">
         <div class="container footer-inner">
             <div>
                 <div class="logo">Trip & Mind</div>
-                <p class="footer-text">
-                    Путешествия, вдохновение и новые открытия.
-                </p>
+                <p class="footer-text">Путешествия, вдохновение и новые открытия.</p>
             </div>
 
             <nav class="footer-nav">
@@ -189,5 +174,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,64 +1,486 @@
+/* СБРОС СТИЛЕЙ  */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* убираю внешние отступы */
+    padding: 0; /* убираем внутренние отступы */
+    box-sizing: border-box; /* чтобы padding и border не увеличивали ширину элемента */
 }
 
+/* Настройка плавной прокрутки по якорям */
 html {
     scroll-behavior: smooth;
 }
 
+/* ОБЩИЙ ФОН НА ВСЮ СТРАНИЦУ - здесь я задал градиент и большую фоновую картинку */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    background: #16245b;
+    line-height: 1.5; 
+    background: linear-gradient(rgba(18, 29, 80, 0.28), rgba(40, 83, 190, 0.18)),
+                url("images/bg.jpg") center top / cover no-repeat fixed; /* градиент + фоновая картинка */
 }
 
+/* КОНТЕЙНЕР — основной блок, который ограничивает ширину контента и центрирует его */
 .container {
-    width: 92%;
-    max-width: 1500px;
-    margin: 0 auto;
+    width: 92%; /* ширина 92% от экрана */
+    max-width: 1500px; /* максимальная ширина 1500 пикселей */
+    margin: 0 auto; /* центрирование по горизонтали */
 }
 
+/* ====================== ШАПКА ====================== */
+/* Шапка сайта всегда сверху, даже при прокрутке */
 .header {
-    position: absolute;
+    position: absolute; /* позиционирование относительно первого экрана */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
-    padding: 28px 0;
+    z-index: 100; /* чтобы шапка была поверх всего */
+    padding: 20px 0;
 }
 
+/* Внутренняя обёртка шапки - flex контейнер для логотипа и меню */
 .header-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* логотип слева меню справа */
     align-items: center;
 }
 
+/* Логотип сайта */
 .logo {
-    font-size: 42px;
+    font-size: 30px;
     font-family: cursive;
-    color:white;
+    color: white;
+    margin-left: 12px; /* небольшой отступ от левого края */
 }
 
+/* Навигационное меню в шапке */
 .nav {
     display: flex;
-    gap: 70px;
+    gap: 50px; /* расстояние между ссылками */
 }
 
+/* Обычные ссылки в меню */
 .nav a {
-    color: rgba(255, 255 , 255, 0.95);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-size: 20px;
-    transition: 0.3s;}
+    transition: 0.3s; /* плавное изменение цвета при наведении */
+}
 
-.nav a:hover { 
-    color: #ffd33d}
+/* Эффект при наведении курсора на ссылки меню */
+.nav a:hover {
+    color: #ffd33d;
+}
 
+/* ====================== HERO ====================== */
+/* Первый главный экран сайта */
 .hero {
-    min-height: 111vh;
+    min-height: 100vh; /* минимум на всю высоту экрана */
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(18, 29, 80, 0.35)), url("images/bg.jpg") center/cover no-repeat;
+}
 
+/* Внутренняя обёртка первого экрана — flex-контейнер для текста слева и слайдера справа */
+.hero-inner {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 350px;
+    position: relative;
+    z-index: 2;
+    padding-top: 200px;
+    padding-bottom: 30px;
+}
+
+/* Левая часть первого экрана блок с текстом */
+.hero-content {
+    max-width: 520px;
+    padding-left: 10px;
+    flex-shrink: 0; /* текст не будет сжиматься при изменении ширины */
+}
+
+/* Большой заголовок на первом экране */
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.08;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+/* Два подзаголовка под основным заголовком */
+.hero-text, .hero-text-small {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.hero-text { margin-bottom: 4px; }
+.hero-text-small { margin-bottom: 30px; }
+
+/* Блок с кнопками под текстом */
+.hero-buttons {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 90px;
+}
+
+/* Основная жёлтая кнопка оставить заявку */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    height: 58px;
+    border-radius: 500px;
+    background: #f6cf3f;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(170, 158, 132, 0.6);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Анимация блика на кнопке при наведении */
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transition: 0.6s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+
+.btn-video {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Круглая кнопка с треугольником внутри */
+.btn-video-circle {
+    width: 58px;
+    height: 58px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    line-height: 1;
+    text-align: center;
+    padding-left: 3px; /* подвинул треугольник чуть правее, чтобы он стоял ровно по центру */
+    flex-shrink: 0;
+}
+
+/* Текст рядом с круглой кнопкой видео */
+.btn-video-text {
+    font-size: 15px;
+}
+
+/* Заголовок перед иконками соцсетей */
+.hero-social-title {
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+/* Блок с иконками соцсетей */
+.hero-socials {
+    display: flex;
+    gap: 30px;
+}
+
+/* Размер иконок соцсетей */
+.hero-socials img {
+    width: 28px;
+    filter: brightness(0) invert(1);
+}
+
+/* ====================== СЛАЙДЕР ====================== */
+/* Основной блок слайдера */
+.hero-slider {
+    position: relative;
+    width: 376px;
+    height: 249px;
+    flex-shrink: 0;
+    margin-top: 64px;
+    border-radius: 18px;
+    margin-left: 0;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+}
+
+/* Каждая отдельная карточка слайдера */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* Активный слайд, который сейчас виден */
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Картинка внутри каждого слайда */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Тёмная плашка внизу слайда с номером и названием */
+.slide-overlay {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    z-index: 2;
+    background: linear-gradient(transparent, rgba(0,0,0,0.2));
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Номер слайда */
+.slide-number {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+/* Название тура внутри слайда */
+.slide h3 {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* Кнопки перелистывания слайдера (влево и вправо) */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-btn-left { left: 12px; }
+.slider-btn-right { right: 12px; }
+
+/* ====================== АНИМАЦИИ ====================== */
+/* Анимация появления блоков при прокрутке */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====================== СЕКЦИИ ====================== */
+/* Общие отступы для всех секций ниже первого экрана */
+.section {
+    padding: 70px 0;
+}
+
+/* Заголовок каждой секции */
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 22px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* лёгкая тень для объёма */
+}
+
+/* Общий стиль для карточек по всему сайту */
+.about-box, .gallery-item, .news-item, .contact-form {
+    background: rgba(255,255,255,0.09);
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+/* ====================== О КОМПАНИИ ====================== */
+.about-box {
+    background: linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.07));
+    border-radius: 28px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: 48px 44px;
+    border: 1px solid rgba(255, 215, 77, 0.2);
+    max-width: 860px;
+    margin: 40px auto;
+}
+
+/* Стили для текста внутри */
+.about-box p {
+    margin-bottom: 18px;
+    font-size: 17.5px;
+    opacity: 0.95;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+.about-box strong {
+    color: #ffd33d;
+}
+
+/* ====================== ГАЛЕРЕЯ ====================== */
+/* Сетка карточек галереи */
+.gallery-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+/* Стиль одной карточки галереи */
+.gallery-item {
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+/* Полупрозрачный эффект при наведении */
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 60%);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Картинка внутри карточки галереи */
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ====================== НОВОСТИ ====================== */
+/* Сетка для новостей */
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* ====================== ФОРМА ====================== */
+/* Стили формы обратной связи */
+.contact-form {
+    padding: 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Поля ввода и текстовая область в форме */
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Кнопка отправки формы */
+.contact-form button {
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 500px;
+    background: #f6cf3f;
+    color: #111;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* ====================== СТАТУС ФОРМЫ ====================== */
+.form-status {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.4s ease;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Успешное сообщение */
+.form-status.success {
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.15);
+}
+
+/* ====================== ПОДВАЛ ====================== */
+/* Подвал сайта */
+.footer {
+    padding: 40px 0;
+    background: rgba(0,0,0,0.4);
+}
+
+/* Внутренняя обёртка подвала */
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Ссылки в подвале */
+.footer-nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    margin-right: 25px;
 }
